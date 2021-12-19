@@ -354,7 +354,7 @@ async def _needs_cooldown(user, cooldown):
 # Start-up functionality
 
 load_dotenv("bind/.env")
-TOKEN = os.getenv('OTIyMDU1MjI0MjA0NjAzNDcz.Yb742A.E5WWVFrQXHryBqn_eGKD5SzLaXg')
+TOKEN = os.getenv('BOT_TOKEN')
 
 conn = _open_db()
 
