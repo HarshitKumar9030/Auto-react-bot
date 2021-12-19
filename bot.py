@@ -74,7 +74,7 @@ async def on_message(message):
     """
 
     bot_logger.debug(f"Message received with contents '{message.content}'.")
-    if message.content[:10] == "!AutoReact" and \
+    if message.content[:10] == "!ar" and \
         type(message.channel) == discord.DMChannel:
         bot_logger.debug(
             (f'Command recieved from {message.author} on channel '
@@ -155,20 +155,20 @@ async def _help(message):
         None
     """
 
-    bot_author = "Vawqer#6022"
+    bot_author = "Harshit Kumar"
     help_dialogue = (
         f"Hello! This is Discord bot made by {bot_author}. "
         "This bot will automatically react to any messages with a user's "
         "favorite emoji for those users who opt in. This will only work"
         " in servers where the bot is installed.\n\n"
         "The commands are as follows:\n"
-        "'!AutoReact.disable' - removes the emoji preference, disabling the bot"
+        "'!ar.disable' - removes the emoji preference, disabling the bot"
         " for the user\n"
-        "'!AutoReact.help' - prints a help message\n"
-        r"'!AutoReact.set {emoji}' - set the preferred reaction emoji"
+        "'!ar.help' - prints a help message\n"
+        r"'!ar.set {emoji}' - set the preferred reaction emoji"
         "\n"
         "\n"
-        r"See https://github.com/DaniSprague/DiscordAutoReactBot for more."
+        r"See what the hell you do with it."
         "\n"
         "\nHave a nice day!")
     if not (await _needs_cooldown(message.author.id, 120)):
@@ -186,7 +186,7 @@ async def _set_pref(message):
 
     Args:
         message: A discord.Message object with contents of 
-            format "!Autoreact.set {emoji}".
+            format "!ar.set {emoji}".
 
     Returns:
         None
@@ -354,7 +354,7 @@ async def _needs_cooldown(user, cooldown):
 # Start-up functionality
 
 load_dotenv("bind/.env")
-TOKEN = os.getenv('DISCORD_TOKEN')
+TOKEN = os.getenv('OTIyMDU1MjI0MjA0NjAzNDcz.Yb742A.E5WWVFrQXHryBqn_eGKD5SzLaXg')
 
 conn = _open_db()
 
